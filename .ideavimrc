@@ -1,0 +1,52 @@
+let mapleader = " "
+
+:set showcmd
+:set ignorecase
+:set smartcase
+set commentary
+set surround
+set hlsearch
+set incsearch
+set whichwrap+=<,>,h,l,[,]
+map <leader>f :action Find<CR>
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+" nnoremap <nowait><silent> <C-C> :noh<CR>nnoremap <nowait><silent> <C-C> :noh<CR>
+"nmap n o<Esc>k
+"nmap N O<Esc>j
+
+nnoremap <C-W>n :action SplitVertically<CR>
+nnoremap <C-W>q :action CloseEditor<CR>
+nnoremap <CR> :noh<CR>
+map <leader>a :action EditorCodeBlockStart<CR>
+map <leader>b :action FindUsagesInFile<CR>
+map <leader>c :action $Copy<CR>
+map <leader>d :action ShowErrorDescription<CR>
+map <leader>e :action RecentFiles<CR>
+map <leader>f :action Find<CR>
+map <leader>g :action GotoDeclaration<CR>
+map <leader>h :action TypeHierarchy<CR>
+map <leader>i :action GotoImplementation<CR>
+map <leader>m :action EditorScrollToCenter<CR>
+map <leader>n :action GotoNextError<CR>
+map <leader>o :action OverrideMethods<CR>
+map <leader>p :action ParameterInfo<CR>
+"map <leader>q :action QuickJavaDoc<CR>
+map <leader>r :action Replace<CR>
+nnoremap <leader>q :source ~/.ideavimrc<CR>
+map <leader>s :action SaveAll<CR>
+map <leader>t :action JS.TypeInfo<CR>
+map <leader>u :action GotoSuperMethod<CR>
+map <leader>v :action $Paste<CR>
+map <leader>w :action EditorSelectWord<CR>
+map <leader>x :action $Cut<CR>
+map <leader>y :action EditorDeleteLine<CR>
+map <leader>[ :action EditorCodeBlockStart<CR>
+map <leader>] :action EditorCodeBlockEnd<CR>
+
+" set selectmode=mouse,key,cmd,ideaselection
+map <leader>z :action ShowErrorDescription<CR>
+
