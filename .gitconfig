@@ -1,0 +1,7 @@
+[user]
+	name = Tapio Seppälä
+	email = tapio.seppala@gmail.com
+[core]
+	editor = vim
+[push]
+	autoSetupRemote = true
