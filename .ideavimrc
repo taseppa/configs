@@ -10,6 +10,7 @@ set incsearch
 set whichwrap+=<,>,h,l,[,]
 set highlightedyank
 set nerdtree
+set matchit
 
 map <leader>f :action Find<CR>
 nnoremap <Tab> >>_
