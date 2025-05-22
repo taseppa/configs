@@ -10,21 +10,16 @@ set incsearch
 set whichwrap+=<,>,h,l,[,]
 set highlightedyank
 set nerdtree
-set matchit
 
-map <leader>f :action Find<CR>
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
-" nnoremap <nowait><silent> <C-C> :noh<CR>nnoremap <nowait><silent> <C-C> :noh<CR>
-"nmap n o<Esc>k
-"nmap N O<Esc>j
 
 " Jump between methods
-nnoremap [[ <Action>(MethodUp)
-nnoremap ]] <Action>(MethodDown)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
 
 " Open NERDTree (use q to exit)
 map <leader>e :NERDTreeFind<CR>
@@ -37,26 +32,33 @@ map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
 " Display options
-map <leader>ud <action>(ToggleDistractionFreeMode)
-map <leader>uz <action>(ToggleZenMode)
-map <leader>uf <action>(ToggleFullScreen)
+map <leader>ud <Action>(ToggleDistractionFreeMode)
+map <leader>uz <Action>(ToggleZenMode)
+map <leader>uf <Action>(ToggleFullScreen)
 
 " File navigation
-map <leader>ff <action>(GotoFile)
-map <leader>fr <action>(RecentFiles)
-map <leader>fc <action>(FindInPath)
+map <leader>ff <Action>(GotoFile)
+map <leader>fr <Action>(RecentFiles)
+map <leader>fc <Action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
-map <leader>fl <action>(RecentLocations)
-map <leader>fs <action>(NewScratchFile)
+map <leader>, <Action>(GotoFile)
+map <leader>. <Action>(FindInPath)
+map <leader>fl <Action>(RecentLocations)
+map <leader>fs <Action>(NewScratchFile)
+
+" Line Diagnostics
+nmap <leader>cd <Action>(ShowErrorDescription)
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
 
 " Go to code
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gr <Action>(ShowUsages)
-nmap <leader>gt <Action>(GotoTest)
-nmap <leader>gf <Action>(Back)
-nmap <leader>gb <Action>(Forward)
+nmap gd <Action>(GotoDeclaration)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(ShowUsages)
+nmap gt <Action>(GotoTest)
+nmap gf <Action>(Back)
+nmap gb <Action>(Forward)
 
 
 nnoremap <C-W>n :action SplitVertically<CR>
@@ -64,13 +66,13 @@ nnoremap <C-W>q :action CloseEditor<CR>
 nnoremap <CR> :noh<CR>
 map <leader>a :action EditorCodeBlockStart<CR>
 map <leader>b :action FindUsagesInFile<CR>
-map <leader>c :action $Copy<CR>
+"map <leader>c :action $Copy<CR>
 map <leader>d :action ShowErrorDescription<CR>
 " map <leader>e :action RecentFiles<CR>
 map <leader>f :action Find<CR>
 map <leader>g :action GotoDeclaration<CR>
 map <leader>h :action TypeHierarchy<CR>
-map <leader>i :action GotoImplementation<CR>
+" map <leader>i :action GotoImplementation<CR>
 map <leader>m :action EditorScrollToCenter<CR>
 map <leader>n :action GotoNextError<CR>
 map <leader>o :action OverrideMethods<CR>
