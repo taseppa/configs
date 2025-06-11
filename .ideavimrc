@@ -46,8 +46,11 @@ map <leader>. <Action>(FindInPath)
 map <leader>fl <Action>(RecentLocations)
 map <leader>fs <Action>(NewScratchFile)
 
-" Line Diagnostics
+" Code Actions
 nmap <leader>cd <Action>(ShowErrorDescription)
+nmap <leader>cr <Action>(RenameElement)
+
+" Line Diagnostics
 nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)
 
