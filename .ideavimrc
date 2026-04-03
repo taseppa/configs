@@ -10,6 +10,7 @@ set incsearch
 set whichwrap+=<,>,h,l,[,]
 set highlightedyank
 set nerdtree
+set clipboard+=unnamed
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
