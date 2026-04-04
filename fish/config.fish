@@ -4,6 +4,7 @@ end
 alias cd='z'
 alias gs='git status'
 alias gca='git commit -a --verbose'
+alias vim='nvim'
 alias nvide='nvide --frame none'
 zoxide init fish | source
 fzf --fish | source

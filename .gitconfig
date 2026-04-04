@@ -5,3 +5,7 @@
 	editor = vim
 [push]
 	autoSetupRemote = true
+[pull]
+	rebase = true
+[commit]
+	verbose = true
